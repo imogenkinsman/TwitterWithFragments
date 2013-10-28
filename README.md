@@ -1,14 +1,6 @@
-My Twitter App
-==============
+Twitter With Fragments
+======================
 
-A twitter app for android.
-
-Features:
-* OAuth integration
-* pull-to-refresh
-* endless scroll
-* tweet posting
+An enhanced version of [My Twitter App](https://github.com/zetsubo/MyTwitterApp) implemented with fragments.
 
 Completed as part of [Codepath](http://thecodepath.com/).
-
-By [Jade McGough](http://www.thezets.com).
