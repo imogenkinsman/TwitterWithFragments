@@ -19,7 +19,7 @@ public final class R {
 		public static final int ptr_id_textwrapper = 0x7f08000d;
 	}
 	public static final class layout {
-		public static final int ptr_header = 0x7f030003;
+		public static final int ptr_header = 0x7f030004;
 	}
 	public static final class string {
 		public static final int ptr_last_updated = 0x7f050003;
