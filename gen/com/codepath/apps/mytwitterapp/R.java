@@ -22,15 +22,17 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_action_edit=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int ptr_pulltorefresh_arrow=0x7f020002;
-        public static final int tweetbutton=0x7f020003;
+        public static final int ic_home=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int ic_mentions=0x7f020003;
+        public static final int ptr_pulltorefresh_arrow=0x7f020004;
+        public static final int tweetbutton=0x7f020005;
     }
     public static final class id {
         public static final int btnCancel=0x7f080001;
         public static final int btnTweet=0x7f080002;
         public static final int etTweet=0x7f080004;
-        public static final int fragmentTweets=0x7f080009;
+        public static final int frame_container=0x7f080009;
         public static final int item1=0x7f080014;
         public static final int ivProfile=0x7f080011;
         public static final int ivUserProfile=0x7f080007;

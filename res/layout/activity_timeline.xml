@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     tools:context=".TimelineActivity" >
 
-    <fragment
-        android:id="@+id/fragmentTweets"
-        android:name="code.codepath.mytwitterapp.fragments.HomeTimelineFragment"
+    <FrameLayout
+        android:id="@+id/frame_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        tools:layout="@layout/fragment_tweets_list" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+    </FrameLayout>
 
 </RelativeLayout>
