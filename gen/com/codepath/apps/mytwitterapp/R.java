@@ -30,22 +30,23 @@ public final class R {
         public static final int btnCancel=0x7f080001;
         public static final int btnTweet=0x7f080002;
         public static final int etTweet=0x7f080004;
-        public static final int item1=0x7f080013;
-        public static final int ivProfile=0x7f080010;
+        public static final int fragmentTweets=0x7f080009;
+        public static final int item1=0x7f080014;
+        public static final int ivProfile=0x7f080011;
         public static final int ivUserProfile=0x7f080007;
-        public static final int lvTweets=0x7f080009;
-        public static final int ptr_id_header=0x7f08000a;
-        public static final int ptr_id_image=0x7f08000b;
-        public static final int ptr_id_last_updated=0x7f08000f;
-        public static final int ptr_id_spinner=0x7f08000c;
-        public static final int ptr_id_text=0x7f08000e;
-        public static final int ptr_id_textwrapper=0x7f08000d;
+        public static final int lvTweets=0x7f08000a;
+        public static final int ptr_id_header=0x7f08000b;
+        public static final int ptr_id_image=0x7f08000c;
+        public static final int ptr_id_last_updated=0x7f080010;
+        public static final int ptr_id_spinner=0x7f08000d;
+        public static final int ptr_id_text=0x7f08000f;
+        public static final int ptr_id_textwrapper=0x7f08000e;
         public static final int rlBody=0x7f080003;
         public static final int rlButtonMenu=0x7f080000;
         public static final int rlUserInfo=0x7f080005;
-        public static final int tvBody=0x7f080012;
+        public static final int tvBody=0x7f080013;
         public static final int tvChars=0x7f080008;
-        public static final int tvName=0x7f080011;
+        public static final int tvName=0x7f080012;
         public static final int tvUser=0x7f080006;
     }
     public static final class layout {
