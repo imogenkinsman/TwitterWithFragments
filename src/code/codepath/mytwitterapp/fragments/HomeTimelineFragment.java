@@ -19,7 +19,7 @@ public class HomeTimelineFragment extends TweetsListFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		fetchTimelineAsync();
+//		fetchTimelineAsync();
 //		setupListeners();
 	}
 	
@@ -62,5 +62,12 @@ public class HomeTimelineFragment extends TweetsListFragment {
 				fetchTimelineAsync();
 			}
 		});
+	}
+	
+	@Override
+	public void onResume() {
+		// TODO: this hacky, but I'm having trouble inserting the Tweet response in onActivityResult in TimelineActvity. Fix this.
+		fetchTimelineAsync();
+		super.onResume();
 	}
 }

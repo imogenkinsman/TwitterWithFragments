@@ -10,12 +10,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import code.codepath.mytwitterapp.fragments.HomeTimelineFragment;
 import code.codepath.mytwitterapp.fragments.MentionsFragment;
-import code.codepath.mytwitterapp.fragments.TweetsListFragment;
 
 import com.codepath.apps.mytwitterapp.R;
 import com.codepath.mytwitterapp.adapters.TweetsAdapter;
@@ -27,7 +27,8 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 	TweetsAdapter twtAdapter;
 	//PullToRefreshListView lvTweets;
 	ArrayList<Tweet> tweets;
-	TweetsListFragment fragmentTweets;
+	Tab tabHome;
+	Tab tabMentions;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +51,12 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 		ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionBar.setDisplayShowTitleEnabled(true);
-		Tab tabHome = actionBar.newTab().setText("Home")
+		tabHome = actionBar.newTab().setText("Home")
 				.setTag("HomeTimelineFragment")
 				.setIcon(R.drawable.ic_home)
 				.setTabListener(this);
 		
-		Tab tabMentions = actionBar.newTab().setText("Mentions")
+		tabMentions = actionBar.newTab().setText("Mentions")
 				.setTag("MentionsTimelineFragment")
 				.setIcon(R.drawable.ic_mentions)
 				.setTabListener(this);
@@ -110,9 +111,14 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_CODE && resultCode == 1) {
-			Tweet newTweet = (Tweet) data.getSerializableExtra("tweet");
-			fragmentTweets.getAdapter().insert(newTweet, 0);
-			Toast.makeText(this, "Tweet Posted", Toast.LENGTH_SHORT).show();
+//			ActionBar actionBar = getActionBar();
+//			Tab tab = actionBar.getSelectedTab();
+//			if(tab.getTag() == "HomeTimelineFragment") {
+//				Tweet newTweet = (Tweet) data.getSerializableExtra("tweet");
+//				HomeTimelineFragment fragment = (HomeTimelineFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentUserTimeline);
+//				fragment.getAdapter().insert(newTweet, 0);
+//				Toast.makeText(this, "Tweet Posted", Toast.LENGTH_SHORT).show();
+//			}
 		}
 	}
 
