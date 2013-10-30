@@ -4,7 +4,6 @@ import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
-import android.sax.StartElementListener;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;

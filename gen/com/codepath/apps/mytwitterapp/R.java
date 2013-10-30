@@ -35,7 +35,6 @@ public final class R {
         public static final int btnTweet=0x7f080002;
         public static final int edit=0x7f08001c;
         public static final int etTweet=0x7f080004;
-        public static final int fragmentUserTimeline=0x7f080010;
         public static final int frame_container=0x7f080011;
         public static final int ivProfile=0x7f080019;
         public static final int ivProfileImage=0x7f08000a;
@@ -43,6 +42,7 @@ public final class R {
         public static final int llCounts=0x7f08000d;
         public static final int lvTweets=0x7f080012;
         public static final int profile=0x7f08001d;
+        public static final int profile_frame_container=0x7f080010;
         public static final int ptr_id_header=0x7f080013;
         public static final int ptr_id_image=0x7f080014;
         public static final int ptr_id_last_updated=0x7f080018;
