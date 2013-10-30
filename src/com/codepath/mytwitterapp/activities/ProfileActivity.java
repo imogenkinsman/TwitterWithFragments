@@ -2,6 +2,7 @@ package com.codepath.mytwitterapp.activities;
 
 import org.json.JSONObject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.ImageView;
@@ -39,13 +40,26 @@ public class ProfileActivity extends FragmentActivity {
 	}
 	
 	public void loadProfileInfo() {
-		MyTwitterApp.getRestClient().getUserInfo(new JsonHttpResponseHandler() {
-			@Override
-			public void onSuccess(JSONObject jsonUser) {
-				User u = User.fromJson(jsonUser);
-				getActionBar().setTitle("@" + u.getScreenName());
-				populateProfileHeader(u);
-			}
-		});
+		Intent i = getIntent();
+		
+		if (i != null && i.hasExtra("screen_name")){
+			MyTwitterApp.getRestClient().getUserInfo(i.getStringExtra("screen_name"), new JsonHttpResponseHandler() {
+				@Override
+				public void onSuccess(JSONObject jsonUser) {
+					User u = User.fromJson(jsonUser);
+					getActionBar().setTitle("@" + u.getScreenName());
+					populateProfileHeader(u);
+				}
+			});
+		} else {
+			MyTwitterApp.getRestClient().getUserInfo(new JsonHttpResponseHandler() {
+				@Override
+				public void onSuccess(JSONObject jsonUser) {
+					User u = User.fromJson(jsonUser);
+					getActionBar().setTitle("@" + u.getScreenName());
+					populateProfileHeader(u);
+				}
+			});
+		}
 	}	
 }
