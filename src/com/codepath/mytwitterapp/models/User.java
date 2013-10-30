@@ -14,6 +14,9 @@ public class User implements Serializable {
 	private String name;
 	private String profileImgUrl;
 	private String screenName;
+	private String tagline;
+	private int followersCount;
+	private int friendsCount;
 	
 	public User() {
 		super();
@@ -27,6 +30,9 @@ public class User implements Serializable {
 			user.profileImgUrl = object.getString("profile_image_url");
 			user.name = object.getString("name");
 			user.screenName = object.getString("screen_name");
+			user.tagline = object.getString("description");
+			user.followersCount = object.getInt("followers_count");
+			user.friendsCount = object.getInt("friends_count");
 		} catch (JSONException e) {
 			e.printStackTrace();
 			return null;
@@ -48,6 +54,18 @@ public class User implements Serializable {
 	
 	public Long getId() {
 		return id;
+	}
+	
+	public String getTagline() {
+		return tagline;
+	}
+	
+	public int getFollowersCount() {
+		return followersCount;
+	}
+	
+	public int getFriendsCount() {
+		return friendsCount;
 	}
 	
 }
