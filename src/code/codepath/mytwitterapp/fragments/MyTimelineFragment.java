@@ -3,10 +3,12 @@ package code.codepath.mytwitterapp.fragments;
 import org.json.JSONArray;
 
 import com.codepath.mytwitterapp.MyTwitterApp;
+import com.codepath.mytwitterapp.helpers.EndlessScrollListener;
 import com.codepath.mytwitterapp.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class MyTimelineFragment extends TweetsListFragment {
 	@Override
@@ -18,6 +20,7 @@ public class MyTimelineFragment extends TweetsListFragment {
 				getAdapter().addAll(Tweet.fromJson(jsonTweets));
 			}
 		});
+		
 	}
 	
 }

@@ -25,18 +25,15 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 
 	private static final int REQUEST_CODE = 0;
 	TweetsAdapter twtAdapter;
-	//PullToRefreshListView lvTweets;
 	ArrayList<Tweet> tweets;
 	Tab tabHome;
 	Tab tabMentions;
+	String currentTab;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_timeline);
-		//setupViews();
-//		setListeners();
-//		fetchTimelineAsync(true);
 		setupNavigationTabs();
 	}
 
@@ -64,39 +61,8 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 		actionBar.addTab(tabHome);
 		actionBar.addTab(tabMentions);
 		actionBar.selectTab(tabHome);
+		currentTab = tabHome.getTag().toString();
 	}
-	
-//	public void setupViews() {
-//		lvTweets = (PullToRefreshListView) findViewById(R.id.lvTweets);
-//		fragmentTweets = (TweetsListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentTweets);
-//	}
-	
-//	public void setListeners() {
-//		
-//		lvTweets.setOnScrollListener(new EndlessScrollListener() {
-//			@Override
-//			public void onLoadMore(int page, int totalItemsCount) {
-//				MyTwitterApp.getRestClient().getOldTimeLine(tweets.get(tweets.size() - 1).getTweetId(), new JsonHttpResponseHandler() {
-//					@Override
-//					public void onSuccess(JSONArray jsonTweets) {	
-//						fragmentTweets.getAdapter().addAll(Tweet.fromJson(jsonTweets));
-//					}
-//				});
-//			}
-//		});
-//		
-//		lvTweets.setOnRefreshListener(new OnRefreshListener() {
-//			
-//			@Override
-//			public void onRefresh() {
-////				fetchTimelineAsync(false);
-//			}
-//		});
-//	}
-	
-//	private void fetchTimelineAsync(final boolean firstLoad) {
-//
-//	}
 	
 	public void onComposeAction(MenuItem mi) {
 		Intent i = new Intent(this, ComposeActivity.class);
@@ -123,9 +89,7 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 	}
 
 	@Override
-	public void onTabReselected(Tab tab, FragmentTransaction ft) {
-		// TODO Auto-generated method stub
-		
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {		
 	}
 
 	@Override
@@ -134,16 +98,16 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 		android.support.v4.app.FragmentTransaction fts = manager.beginTransaction();
 		if (tab.getTag() == "HomeTimelineFragment") {
 			fts.replace(R.id.frame_container, new HomeTimelineFragment());
+			currentTab = tabHome.getTag().toString();
 		} else {
 			fts.replace(R.id.frame_container, new MentionsFragment());
+			currentTab = tabMentions.getTag().toString();
 		}
 		fts.commit();
 	}
 
 	@Override
-	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		// TODO Auto-generated method stub
-		
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {		
 	}
 
 }

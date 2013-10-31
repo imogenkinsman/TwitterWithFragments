@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.codepath.apps.mytwitterapp.R;
 import com.codepath.mytwitterapp.adapters.TweetsAdapter;
+import com.codepath.mytwitterapp.helpers.EndlessScrollListener;
 import com.codepath.mytwitterapp.models.Tweet;
 
 import eu.erikw.PullToRefreshListView;
