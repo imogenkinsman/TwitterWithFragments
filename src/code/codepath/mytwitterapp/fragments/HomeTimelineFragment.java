@@ -15,9 +15,6 @@ import com.codepath.mytwitterapp.helpers.EndlessScrollListener;
 import com.codepath.mytwitterapp.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
-import eu.erikw.PullToRefreshListView;
-import eu.erikw.PullToRefreshListView.OnRefreshListener;
-
 public class HomeTimelineFragment extends TweetsListFragment {
 
 	@Override

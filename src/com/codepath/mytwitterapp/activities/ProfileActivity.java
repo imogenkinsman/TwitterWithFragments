@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -75,11 +74,7 @@ public class ProfileActivity extends FragmentActivity {
 		FragmentManager manager = getSupportFragmentManager();
 		android.support.v4.app.FragmentTransaction fts = manager.beginTransaction();		
 		if (screenName != null) {
-			Log.d("DEBUG", screenName);
 			UserTimelineFragment frag = new UserTimelineFragment();
-//			Bundle data = new Bundle();
-//			data.putString("screen_name", screenName);
-//			frag.setArguments(args)
 			fts.replace(R.id.profile_frame_container, frag);
 			fts.commit();
 			frag.setTimeline(screenName);

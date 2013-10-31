@@ -10,10 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 import code.codepath.mytwitterapp.fragments.HomeTimelineFragment;
 import code.codepath.mytwitterapp.fragments.MentionsFragment;
 
@@ -77,6 +75,7 @@ public class TimelineActivity extends FragmentActivity implements TabListener {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_CODE && resultCode == 1) {
+			// TODO: figure out why this crashes
 //			ActionBar actionBar = getActionBar();
 //			Tab tab = actionBar.getSelectedTab();
 //			if(tab.getTag() == "HomeTimelineFragment") {

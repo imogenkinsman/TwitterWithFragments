@@ -2,10 +2,7 @@ package code.codepath.mytwitterapp.fragments;
 
 import org.json.JSONArray;
 
-import android.util.Log;
-
 import com.codepath.mytwitterapp.MyTwitterApp;
-import com.codepath.mytwitterapp.helpers.EndlessScrollListener;
 import com.codepath.mytwitterapp.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
