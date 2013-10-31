@@ -9,11 +9,11 @@ import android.support.v4.app.FragmentManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import code.codepath.mytwitterapp.fragments.MyTimelineFragment;
-import code.codepath.mytwitterapp.fragments.UserTimelineFragment;
 
 import com.codepath.apps.mytwitterapp.R;
 import com.codepath.mytwitterapp.MyTwitterApp;
+import com.codepath.mytwitterapp.fragments.MyTimelineFragment;
+import com.codepath.mytwitterapp.fragments.UserTimelineFragment;
 import com.codepath.mytwitterapp.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.ImageLoader;

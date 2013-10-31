@@ -12,11 +12,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
-import code.codepath.mytwitterapp.fragments.HomeTimelineFragment;
-import code.codepath.mytwitterapp.fragments.MentionsFragment;
 
 import com.codepath.apps.mytwitterapp.R;
 import com.codepath.mytwitterapp.adapters.TweetsAdapter;
+import com.codepath.mytwitterapp.fragments.HomeTimelineFragment;
+import com.codepath.mytwitterapp.fragments.MentionsFragment;
 import com.codepath.mytwitterapp.models.Tweet;
 
 public class TimelineActivity extends FragmentActivity implements TabListener {

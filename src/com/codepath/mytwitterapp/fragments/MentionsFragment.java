@@ -1,4 +1,4 @@
-package code.codepath.mytwitterapp.fragments;
+package com.codepath.mytwitterapp.fragments;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
